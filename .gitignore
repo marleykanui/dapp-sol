@@ -1,1 +1,15 @@
 node_modules/
+
+
+ contract.deploy({
+  data: bytecode,
+  arguments: [listOfPosts.map((name) =>
+    connection.utils.asciiToHex(name))]
+  }).send({
+    from: '0xE5663865aDC8bDa4Af5A8c9f9f543585F021cb1E',
+    gasPrice: connection.utils.toWei('0.00003', 'ether'),
+    gas: 1500000
+  }).then((deployedContract) => {
+  contract.options.address = deployedContract.options.address;
+  console.log(deployedContract.options.address);
+});
