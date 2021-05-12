@@ -1,5 +1,9 @@
 {
   "name": "dapp-sol",
   "version": "1.0.0",
-  "description": "A decentralized application (dapp) containing a smart contract deployed to an in-memory blockchain."
+  "description": "A decentralized application (dapp) containing a smart contract deployed to an in-memory blockchain.",
+  "dependencies": {
+    "ganache-cli": "^6.12.2",
+    "solc": "^0.8.4"
+  }
 }
